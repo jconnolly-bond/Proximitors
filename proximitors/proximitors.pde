@@ -41,4 +41,5 @@ void draw() {
   }
 
   box.show();
+  System.gc();
 }

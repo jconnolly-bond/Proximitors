@@ -47,7 +47,7 @@ class SceneBox {
     // Rotate each vertex
     for (int i = 0; i < vertices.size(); i++) {
       PVector v = vertices.get(i);
-      v.set(rotateVectorX(v, rotationAngle));
+      v.set(rotateVectorY(v, rotationAngle));
     }
 
     // Draw cube
@@ -107,7 +107,7 @@ class SceneBox {
     shape(floor);
   }
 
-  PVector rotateVectorX(PVector v, float angle) {  
+  PVector rotateVectorY(PVector v, float angle) {  
     PVector result = new PVector();
     PVector vCopy = v.copy();
     result.x = vCopy.x * cos(angle) + vCopy.z * sin(angle);
